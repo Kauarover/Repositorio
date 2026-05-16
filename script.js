@@ -5,5 +5,5 @@ document.getElementById("yes").addEventListener("click", function() {
 
 // Evento para o botão "Não"
 document.getElementById("no").addEventListener("click", function() {
-    alert("Não existe essa opção!");
+    alert("Não existe essa opção");
 });
