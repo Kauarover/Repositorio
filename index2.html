@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>heart partivle version2</title>
+    
     <!-- credits to the writter "@tommyho" follow him on 👉 https://codepen.io/tommyho -->
     <style>
+
+      textPath{
+        position: relative;
+        text-align: center;
+        top: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2em;
+        color: rgb(0, 47, 255);
+        z-index: 100;
+        
+      }
+       .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        svg {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            fill: #3d91ff; /* Cor do texto */
+        }
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #00f7ff;
+        background-color: #0077ff;
         font-family: "Archivo Black", sans-serif;
         color: white;
       }
@@ -132,6 +155,15 @@
         cursor: pointer;
         z-index: 100;
         backdrop-filter: blur(5px);
+      }
+
+      .texto {
+        position: fixed;
+        top: 240px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        pointer-events: none;
       }
 
       @media (max-width: 600px) {
@@ -423,5 +455,21 @@
       // Start the animation
       init();
     </script>
+    <div class="texto">
+        <svg width="500" height="200">
+            
+            <defs>
+                <path id="minhaCurva" d="M 50,150 Q 250,20 450,150"  />
+            </defs>
+            
+            <text>
+                <textPath href="#minhaCurva" startOffset="50%" text-anchor="middle">
+                    Olha para o lado
+                </textPath>
+            </text>
+            
+        </svg>
+    </div>
+
   </body>
 </html>
